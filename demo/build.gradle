@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+//支持java8
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+//解决控制台乱码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
